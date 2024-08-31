@@ -1,0 +1,13 @@
+service ImageService {
+
+    rpc ListImages(ListImagesRequest) returns (ListImagesResponse) {}
+
+    rpc ImageStatus(ImageStatusRequest) returns (ImageStatusResponse) {}
+
+    rpc PullImage(PullImageRequest) returns (PullImageResponse) {}
+
+    rpc RemoveImage(RemoveImageRequest) returns (RemoveImageResponse) {}
+
+    rpc ImageFsInfo(ImageFsInfoRequest) returns (ImageFsInfoResponse) {}
+
+}
