@@ -1,0 +1,47 @@
+package cloudprovider
+
+import (
+
+    "context"
+
+    "errors"
+
+    "fmt"
+
+    "strings"
+
+    v1 "k8s.io/api/core/v1"
+
+    "k8s.io/apimachinery/pkg/types"
+
+    "k8s.io/client-go/informers"
+
+    clientset "k8s.io/client-go/kubernetes"
+
+    restclient "k8s.io/client-go/rest"
+
+)
+
+// Interface is an abstract, pluggable interface for cloud providers.
+
+type Interface interface {
+
+    Initialize(clientBuilder ControllerClientBuilder, stop <-chan struct{})
+
+    LoadBalancer() (LoadBalancer, bool)
+
+    Instances() (Instances, bool)
+
+    InstancesV2() (InstancesV2, bool)
+
+    Zones() (Zones, bool)
+
+    Clusters() (Clusters, bool)
+
+    Routes() (Routes, bool)
+
+    ProviderName() string
+
+    HasClusterID() bool
+
+}
