@@ -1,0 +1,45 @@
+service RuntimeService {
+
+    rpc Version(VersionRequest) returns (VersionResponse) {}
+
+    rpc RunPodSandbox(RunPodSandboxRequest) returns (RunPodSandboxResponse) {}
+
+    rpc StopPodSandbox(StopPodSandboxRequest) returns (StopPodSandboxResponse) {}
+
+    rpc RemovePodSandbox(RemovePodSandboxRequest) returns (RemovePodSandboxResponse) {}
+
+    rpc PodSandboxStatus(PodSandboxStatusRequest) returns (PodSandboxStatusResponse) {}
+
+    rpc ListPodSandbox(ListPodSandboxRequest) returns (ListPodSandboxResponse) {}
+
+    rpc CreateContainer(CreateContainerRequest) returns (CreateContainerResponse) {}
+
+    rpc StartContainer(StartContainerRequest) returns (StartContainerResponse) {}
+
+    rpc StopContainer(StopContainerRequest) returns (StopContainerResponse) {}
+
+    rpc RemoveContainer(RemoveContainerRequest) returns (RemoveContainerResponse) {}
+
+    rpc ListContainers(ListContainersRequest) returns (ListContainersResponse) {}
+
+    rpc ContainerStatus(ContainerStatusRequest) returns (ContainerStatusResponse) {}
+
+    rpc UpdateContainerResources(UpdateContainerResourcesRequest) returns (UpdateContainerResourcesResponse) {}
+
+    rpc ExecSync(ExecSyncRequest) returns (ExecSyncResponse) {}
+
+    rpc Exec(ExecRequest) returns (ExecResponse) {}
+
+    rpc Attach(AttachRequest) returns (AttachResponse) {}
+
+    rpc PortForward(PortForwardRequest) returns (PortForwardResponse) {}
+
+    rpc ContainerStats(ContainerStatsRequest) returns (ContainerStatsResponse) {}
+
+    rpc ListContainerStats(ListContainerStatsRequest) returns (ListContainerStatsResponse) {}
+
+    rpc UpdateRuntimeConfig(UpdateRuntimeConfigRequest) returns (UpdateRuntimeConfigResponse) {}
+
+    rpc Status(StatusRequest) returns (StatusResponse) {}
+
+}
