@@ -1,0 +1,9 @@
+message CreateContainerRequest {
+
+    string pod_sandbox_id = 1;
+
+    ContainerConfig config = 2;
+
+    PodSandboxConfig sandbox_config = 3;
+
+}
