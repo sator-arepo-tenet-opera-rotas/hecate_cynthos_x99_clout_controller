@@ -1,0 +1,13 @@
+type LoadBalancer interface {
+
+    GetLoadBalancer(ctx context.Context, clusterName string, service *v1.Service) (status *v1.LoadBalancerStatus, exists bool, err error)	
+
+    GetLoadBalancerName(ctx context.Context, clusterName string, service *v1.Service) string
+
+    EnsureLoadBalancer(ctx context.Context, clusterName string, service *v1.Service, nodes []*v1.Node) (*v1.LoadBalancerStatus, error)
+
+    UpdateLoadBalancer(ctx context.Context, clusterName string, service *v1.Service, nodes []*v1.Node) error
+
+    EnsureLoadBalancerDeleted(ctx context.Context, clusterName string, service *v1.Service) error
+
+}
